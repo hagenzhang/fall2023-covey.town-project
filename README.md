@@ -2,7 +2,8 @@
 
 Covey.Town provides a virtual meeting space where different groups of people can have simultaneous video calls, allowing participants to drift between different conversations, just like in real life.
 Covey.Town was built for Northeastern's [Spring 2021 software engineering course](https://neu-se.github.io/CS4530-CS5500-Spring-2021/), and is designed to be reused across semesters.
-You can view our reference deployment of the app at [app.covey.town](https://app.covey.town/), and our project showcase ([Fall 2022](https://neu-se.github.io/CS4530-Fall-2022/assignments/project-showcase), [Spring 2022](https://neu-se.github.io/CS4530-Spring-2022/assignments/project-showcase), [Spring 2021](https://neu-se.github.io/CS4530-CS5500-Spring-2021/project-showcase)) highlight select student projects.
+
+You can view our reference deployment of the app at [app.covey.town](https://app.covey.town/)
 
 ![Covey.Town Architecture](docs/covey-town-architecture.png)
 
@@ -18,10 +19,8 @@ Running the application locally entails running both the backend service and a f
 
 ### Setting up the backend
 
-To run the backend, you will need a Twilio account. Twilio provides new accounts with $15 of credit, which is more than enough to get started.
-To create an account and configure your local environment:
-
-1. Go to [Twilio](https://www.twilio.com/) and create an account. You do not need to provide a credit card to create a trial account.
+To run the backend, you will need a Twilio account.
+1. Go to [Twilio](https://www.twilio.com/) and create an account
 2. Create an API key and secret (select "API Keys" on the left under "Settings")
 3. Create a `.env` file in the `townService` directory, setting the values as follows:
 
@@ -42,7 +41,7 @@ The backend will automatically restart if you change any of the files in the `to
 Create a `.env` file in the `frontend` directory, with the line: `NEXT_PUBLIC_TOWNS_SERVICE_URL=http://localhost:8081` (if you deploy the towns service to another location, put that location here instead)
 
 For ease of debugging, you might also set the environmental variable `NEXT_PUBLIC_TOWN_DEV_MODE=true`. When set to `true`, the frontend will
-automatically connect to the town with the friendly name "DEBUG_TOWN" (creating one if needed), and will *not* try to connect to the Twilio API. This is useful if you want to quickly test changes to the frontend (reloading the page and re-acquiring video devices can be much slower than re-loading without Twilio).
+automatically connect to the town with the friendly name "DEBUG_TOWN" (creating one if needed), and will *not* try to connect to the Twilio API.
 
 ### Running the frontend
 
